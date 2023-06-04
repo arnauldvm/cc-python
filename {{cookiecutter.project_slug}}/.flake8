@@ -1,0 +1,9 @@
+[flake8]
+exclude =
+    .git,
+    .venv*,
+    __pycache__,
+    *.pyc,
+    dist
+max-line-length = 100
+max-complexity = 10

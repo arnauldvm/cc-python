@@ -1,0 +1,15 @@
+{
+    "_extensions": ["cookiecutter.extensions.SlugifyExtension"],
+
+    "project_name": "Test project",
+    "project_slug": "{{ cookiecutter.project_name|slugify }}",
+    "project_description": "This test project aims at demonstrating the use of cookiecutter",
+    "author_fullname": "Arnauld Van Muysewinkel",
+    "author_email": "avm@pendragon.be",
+    "dist_name": "pendragon.{{cookiecutter.project_slug | replace('-', '_')}}",
+    "package_name": "{{cookiecutter.project_slug | replace('-', '')}}",
+    "cli_cmd_name": "{{cookiecutter.package_name}}",
+    "with_venv": ["yes", "no"],
+    "with_git": [ "yes", "no"],
+    "with_commit": [ "yes", "no"]
+}

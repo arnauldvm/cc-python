@@ -1,0 +1,47 @@
+[build-system]
+requires = [
+    "setuptools>=45",
+    "setuptools_scm[toml]>=6.2"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "{{cookiecutter.dist_name}}"
+description = "{{cookiecutter.project_description}}"
+readme = "README.md"
+authors = [
+    {name = "{{cookiecutter.author_fullname}}"}
+    ]
+dynamic = ["version"]
+requires-python = ">={{'{{postprocess.python_version}}'}}"
+classifiers = [
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Intended Audience :: System Administrators",  # CHANGE_ME if not appropriate
+    "Programming Language :: Python :: {{'{{postprocess.python_version}}'}}",
+    "Topic :: System :: Systems Administration",  # CHANGE_ME if not appropriate
+    "Topic :: Utilities",
+]
+
+# Add your dependencies here:
+dependencies = [
+]
+
+[project.scripts]
+{{cookiecutter.cli_cmd_name}} = "{{cookiecutter.package_name}}.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "flake8"
+]
+
+[tool.setuptools_scm]
+# For smarter version schemes and other configuration options,
+# check out https://github.com/pypa/setuptools_scm
+version_scheme = "no-guess-dev"
+write_to = "src/{{cookiecutter.package_name}}/_version.py"
+tag_regex = "^(?P<prefix>version/)?(?P<version>(?(prefix).+|0\\.0))$"
+  # We're using tags of the form "version/X.Y.Z"
+  # (However, we must also accept "0.0" because of issue https://github.com/pypa/setuptools_scm/issues/804)
+fallback_version = "0.dev0+notag"
+  # This should be used when no tag is foudn (e.g. no git repo)
