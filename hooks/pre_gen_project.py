@@ -25,7 +25,8 @@ for k, r in rules.items():
     if k not in context:
         raise LookupError(f"Missing  context variable '{k}', abort.")
     if not re.match(r, context[k]):
-        raise ValueError(f"Invalid context variable {k}={context[k]!r} does not match {r!r}, abort.")
+        raise ValueError(f"Invalid context variable {k}={context[k]!r} "
+                         f"does not match {r!r}, abort.")
 
 
 if '{{cookiecutter.with_git}}' == 'yes':
