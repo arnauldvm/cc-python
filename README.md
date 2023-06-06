@@ -19,13 +19,13 @@
      - _constraint_: only letters, digits, ".", "-", "_", starts and ends with letter or digit
      - _automatically computed from_ `project_slug`
      - _default_: "be_pendragon_test_project"
-- `package_name`: Name of the Python package
+- `pack_name`: Name of the Python package
      - _constraint_: lowercase and digits, starts with lowercase
      - _automatically computed from_ `project_slug`
      - _default_: "testproject"
 - `cli_cmd_name`: Name of the CLI command
      - _constraint_: no space
-     - _automatically computed from_ `package_name`
+     - _automatically computed from_ `pack_name`
      - _default_: "testproject"
 - `with_venv`: Activate creation of Python venv
      - _constraint_: "yes" or "no"
@@ -46,7 +46,7 @@
    - `.venv/` _(only if `{{...with_venv}}` == "yes")
    - `pyproject.toml`
    - `src/`
-      - `{{....package_name}}/`
+      - `{{....pack_name}}/`
          - `__init__.py`
          - `cli.py` # Sample CLI providing access to token module
          - `token.py`  # Sample module providing token generation features

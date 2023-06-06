@@ -28,7 +28,7 @@ dependencies = [
 ]
 
 [project.scripts]
-{{cookiecutter.cli_cmd_name}} = "{{cookiecutter.package_name}}.cli:main"
+{{cookiecutter.cli_cmd_name}} = "{{cookiecutter.pack_name}}.cli:main"
 
 [project.optional-dependencies]
 dev = [
@@ -39,7 +39,7 @@ dev = [
 # For smarter version schemes and other configuration options,
 # check out https://github.com/pypa/setuptools_scm
 version_scheme = "no-guess-dev"
-write_to = "src/{{cookiecutter.package_name}}/_version.py"
+write_to = "src/{{cookiecutter.pack_name}}/_version.py"
 tag_regex = "^(?P<prefix>version/)?(?P<version>(?(prefix).+|0\\.0))$"
   # We're using tags of the form "version/X.Y.Z"
   # (However, we must also accept "0.0" because of issue https://github.com/pypa/setuptools_scm/issues/804)

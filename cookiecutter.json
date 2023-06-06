@@ -7,8 +7,8 @@
     "author_fullname": "Arnauld Van Muysewinkel",
     "author_email": "avm@pendragon.be",
     "dist_name": "pendragon.{{cookiecutter.project_slug | replace('-', '_')}}",
-    "package_name": "{{cookiecutter.project_slug | replace('-', '')}}",
-    "cli_cmd_name": "{{cookiecutter.package_name}}",
+    "pack_name": "{{cookiecutter.project_slug | replace('-', '')}}",
+    "cli_cmd_name": "{{cookiecutter.pack_name}}",
     "with_venv": ["yes", "no"],
     "with_git": [ "yes", "no"],
     "with_commit": [ "yes", "no"]
