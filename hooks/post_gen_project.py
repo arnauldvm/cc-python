@@ -25,6 +25,8 @@ if '{{cookiecutter.with_git}}' == 'yes':
         run(['git', 'add', '.'], check=True)
         run(['git', 'commit', '-m', 'Cookiecutter scaffolding with MW Python template'], check=True)
         # run(['git', 'tag', 'version/0.0.0'], check=True)
+        run(['git', 'branch', 'scaffold'], check=True)
+        #   This branch may be used in the future to merge new versions of the template
 
 if '{{cookiecutter.with_venv}}' == 'yes':
     print('',
