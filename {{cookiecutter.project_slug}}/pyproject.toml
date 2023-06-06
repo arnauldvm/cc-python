@@ -18,7 +18,7 @@ classifiers = [
     "Operating System :: OS Independent",
     "Environment :: Console",
     "Intended Audience :: System Administrators",  # CHANGE_ME if not appropriate
-    "Programming Language :: Python :: "{{"{version.major}.{version.minor}"|pyversion}}",
+    "Programming Language :: Python :: {{"{version.major}.{version.minor}"|pyversion}}",
     "Topic :: System :: Systems Administration",  # CHANGE_ME if not appropriate
     "Topic :: Utilities",
 ]
