@@ -24,8 +24,7 @@ if '{{cookiecutter.with_git}}' == 'yes':
         run(['git', 'commit', '--allow-empty', '-m', 'Initial commit'], check=True)
         run(['git', 'add', '.'], check=True)
         run(['git', 'commit', '-m', 'Cookiecutter scaffolding with MW Python template'], check=True)
-        run(['git', 'tag', 'version/0.0.0'], check=True)
-
+        # run(['git', 'tag', 'version/0.0.0'], check=True)
 
 if '{{cookiecutter.with_venv}}' == 'yes':
     print('',
