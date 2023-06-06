@@ -7,7 +7,7 @@ Configuration: Context variables
 - `project_name`: Human friendly name of the project
     - _default_: "Test project"
 - `project_slug`: Directory name for the project
-    - _constraint_: no space
+    - _constraint_: no space character
     - _automatically computed from_: `project_name`
     - _default_: "test-project"
 - `project_description`: Long description of the project
