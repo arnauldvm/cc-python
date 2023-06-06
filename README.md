@@ -16,7 +16,7 @@ Configuration: Context variables
     - _default_: "Arnauld Van Muysewinkel"
 - `author_email`: Email of the main author
     - _constraint_: valid email address
-    - _default_: "avm@pendragon.be"
+    - _default_: "avm@pendragon.be" <!-- markdownlint-disable-line MD034 no-bare-urls -->
 - `dist_name`: Name for publishing the Python package in PyPI repository
     - _constraint_: only letters, digits, ".", "-", "_", starts and ends with letter or digit
     - _automatically computed from_: `project_slug`
