@@ -44,4 +44,4 @@ tag_regex = "^(?P<prefix>version/)?(?P<version>(?(prefix).+|0\\.0))$"
   # We're using tags of the form "version/X.Y.Z"
   # (However, we must also accept "0.0" because of issue https://github.com/pypa/setuptools_scm/issues/804)
 fallback_version = "0.dev0+notag"
-  # This should be used when no tag is foudn (e.g. no git repo)
+  # This should be used when no tag is found (e.g. no git repo)
