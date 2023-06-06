@@ -20,7 +20,7 @@ Configuration: Context variables
 - `dist_name`: Name for publishing the Python package in PyPI repository
     - _constraint_: only letters, digits, ".", "-", "_", starts and ends with letter or digit
     - _automatically computed from_: `project_slug`
-    - _default_: "be_pendragon_test_project"
+    - _default_: "pendragon.test_project"
 - `pack_name`: Name of the Python package
     - _constraint_: lowercase and digits, starts with lowercase
     - _automatically computed from_: `project_slug`
