@@ -1,5 +1,4 @@
 {
-    "_extensions": ["cookiecutter.extensions.SlugifyExtension"],
 
     "project_name": "Test project",
     "project_slug": "{{ cookiecutter.project_name|slugify }}",
