@@ -1,4 +1,5 @@
 {
+    "_extensions": ["local_extensions.PythonVersionExtension"],
 
     "project_name": "Test project",
     "project_slug": "{{ cookiecutter.project_name|slugify }}",

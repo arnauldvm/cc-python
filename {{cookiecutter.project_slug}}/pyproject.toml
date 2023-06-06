@@ -13,12 +13,12 @@ authors = [
     {name = "{{cookiecutter.author_fullname}}"}
     ]
 dynamic = ["version"]
-requires-python = ">={{'{{postprocess.python_version}}'}}"
+requires-python = ">={{"{version.major}.{version.minor}"|pyversion}}"
 classifiers = [
     "Operating System :: OS Independent",
     "Environment :: Console",
     "Intended Audience :: System Administrators",  # CHANGE_ME if not appropriate
-    "Programming Language :: Python :: {{'{{postprocess.python_version}}'}}",
+    "Programming Language :: Python :: "{{"{version.major}.{version.minor}"|pyversion}}",
     "Topic :: System :: Systems Administration",  # CHANGE_ME if not appropriate
     "Topic :: Utilities",
 ]

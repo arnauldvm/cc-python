@@ -1,23 +1,12 @@
 #!/usr/bin/env python
 from os import linesep
-from sys import version_info
 import jinja2 as j2
 
 print('# Post hook')
 
-print("- Injecting complex variables in templates (second pass)...")
-
-python_version = f"{version_info.major}.{version_info.minor}"
-context = {'postprocess': {
-    'python_version': python_version,
-}}
-
-j2_loader = j2.FileSystemLoader('.')
-j2_env = j2.Environment(loader=j2_loader)
-for file in ['pyproject.toml']:
-    j2_env.get_template(file).stream(context).dump(file)
-
 if '{{cookiecutter.with_venv}}' == 'yes':
+    from sys import version_info
+    python_version = f"{version_info.major}.{version_info.minor}"
     venv_dir = f".venv{python_version}"
     print(f"- Creating venv '{venv_dir}'...")
     import venv
