@@ -6,8 +6,6 @@ print('# Pre hook')
 
 print("- Verifying format of context variables...")
 
-# cSpell:word cookiecutter
-# cSpell:ignore jsonify
 context = json.loads("""
 {{cookiecutter | jsonify}}
 """)

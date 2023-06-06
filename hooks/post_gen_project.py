@@ -8,7 +8,7 @@ print('# Post hook')
 print("- Injecting complex variables in templates (second pass)...")
 
 python_version = f"{version_info.major}.{version_info.minor}"
-context = {'postprocess': {  # cSpell:ignore postprocess
+context = {'postprocess': {
     'python_version': python_version,
 }}
 
@@ -17,7 +17,6 @@ j2_env = j2.Environment(loader=j2_loader)
 for file in ['pyproject.toml']:
     j2_env.get_template(file).stream(context).dump(file)
 
-# cSpell:word cookiecutter
 if '{{cookiecutter.with_venv}}' == 'yes':
     venv_dir = f".venv{python_version}"
     print(f"- Creating venv '{venv_dir}'...")
