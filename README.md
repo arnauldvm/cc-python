@@ -8,7 +8,7 @@ Configuration: Context variables
     - _default_: "Test project"
 - `project_slug`: Directory name for the project
     - _constraint_: no space
-    - _automatically computed from_ `project_name`
+    - _automatically computed from_: `project_name`
     - _default_: "test-project"
 - `project_description`: Long description of the project
     - _default_: "This test project aims at demonstrating the use of cookiecutter"
@@ -19,15 +19,15 @@ Configuration: Context variables
     - _default_: "avm@pendragon.be"
 - `dist_name`: Name for publishing the Python package in PyPI repository
     - _constraint_: only letters, digits, ".", "-", "_", starts and ends with letter or digit
-    - _automatically computed from_ `project_slug`
+    - _automatically computed from_: `project_slug`
     - _default_: "be_pendragon_test_project"
 - `pack_name`: Name of the Python package
     - _constraint_: lowercase and digits, starts with lowercase
-    - _automatically computed from_ `project_slug`
+    - _automatically computed from_: `project_slug`
     - _default_: "testproject"
 - `cli_cmd_name`: Name of the CLI command
     - _constraint_: no space
-    - _automatically computed from_ `pack_name`
+    - _automatically computed from_: `pack_name`
     - _default_: "testproject"
 - `with_venv`: Activate creation of Python venv
     - _constraint_: "yes" or "no"
